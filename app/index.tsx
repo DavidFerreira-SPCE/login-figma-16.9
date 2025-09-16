@@ -29,9 +29,8 @@ const styles = StyleSheet.create({
 
     alignItems: 'center',
     justifyContent: 'center',
-    fontStyle: 'italic',
     color: "#1F418B",
-    fontWeight: '400',
+    fontWeight: '600',
     fontSize: 32,
     paddingLeft: 27,
     width: 343,
