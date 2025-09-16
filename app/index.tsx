@@ -26,11 +26,28 @@ export default function Index() {
 }
 const styles = StyleSheet.create({
   Texto: {
+
     alignItems: 'center',
-    gap: 8
+    justifyContent: 'center',
+    fontStyle: 'italic',
+    color: "#1F418B",
+    fontWeight: '400',
+    fontSize: 32,
+    paddingLeft: 27,
+    width: 343,
+    height: 166,
+    top: -46,
   },
   Texto2: {
-    marginLeft: 10
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontStyle: 'italic',
+    fontWeight:'300',
+    fontSize: 20,
+    paddingLeft: 31.2,
+    width: 323,
+    height: 156,
+    bottom: 120,
   },
   userImage: {
      width: 385,
