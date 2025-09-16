@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
@@ -9,13 +10,18 @@ export default function Index() {
         alignItems: "center",
       }}
     >
+      <Image
+        source={require("../assets/images/welcome.image.svg")}
+        style={styles.userImage} />
+      
+      <View>
       <Text style={styles.Texto}>
-        Discover your dream job here.
-      </Text>
+        Discover your dream job here.</Text>
       <Text style={styles.Texto2}>
         Explore all the existing job roles based on your interest and study major</Text>
+      </View>
+      
     </View>
-
   );
 }
 const styles = StyleSheet.create({
@@ -24,9 +30,11 @@ const styles = StyleSheet.create({
     gap: 8
   },
   Texto2: {
-    
-    marginLeft: 8
-
-  }
+    marginLeft: 10
+  },
+  userImage: {
+     width: 385,
+     height: 422
+  },
 },
 );
