@@ -18,24 +18,34 @@ export default function Index() {
       </View>
 
       <View style={styles.underBackBox}>
-        <Text style={styles.texto}>
+        <Text style={styles.text}>
           Login Here</Text>
-        <Text style={styles.texto2}>
+        <Text style={styles.text2}>
           Welcome back, You've been missed!
         </Text>
       </View>
 
       <View style={styles.loginBox}>
-
         <View style={styles.imputBox}>
-          <Text>
+          <Text style={styles.text3}>
             Email</Text>
         </View>
 
         <View style={styles.imputBox}>
-          <Text>
+          <Text style={styles.text3}>
             Password</Text>
         </View>
+      
+        <View style={styles.forgotBox}>
+          <TouchableOpacity onPress={() => router.back()}>
+          <Text style={styles.text4}>
+          Forgot Your Password? </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+        <View>
+        <Text>Create New Account</Text>
       </View>
 
       <View style={styles.buttonBox}>
@@ -43,8 +53,6 @@ export default function Index() {
           <Text style={styles.textoButton}>
             Sign In</Text>
         </TouchableOpacity>
-
-
       </View>
     </View>
   );
@@ -70,7 +78,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
 
-  backBox:{
+  backBox:{//conteudo da back box
     color:"#1F41BB",
     alignContent: 'flex-start',
     fontSize: 14,
@@ -92,9 +100,10 @@ const styles = StyleSheet.create({
 
   loginBox: {//Container para as boxes de login com user e senha
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-end',
+    width: '100%',
     marginTop: 35,
-    gap: 30,
+    gap: 20,
   },
 
     buttonBox: {//Estilização do Container Button
@@ -113,6 +122,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#63636346'
   },
 
+  forgotBox:{
+  alignItems:'flex-end',
+  marginTop: 20,
+  marginRight:-20,
+  marginBottom: 416
+  },
+
   textoButton: {//Estilização de texto do botão Sign In
     color: '#FFFFFF',
     fontSize: 20
@@ -127,7 +143,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   
-  texto: {//Conteudo do container underBack
+  text: {//Conteudo do container underBack
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -136,14 +152,27 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
 
-  texto2: {//Conteudo do container underBack
-    alignItems: 'center',
+  text2: {//Conteudo do container underBack
     justifyContent: 'center',
     textAlign: 'center',
     fontWeight: 600,
     fontSize: 21,
   },
+  
+  text3 : {//Conteudo das boxes de imput
+  width:96,
+  height:24,
+  marginLeft: 20,
+  fontSize: 16,
+  fontWeight: 500
+  },
 
-},
-);
+  text4:{
+  width: 167,
+  height: 21,
+  marginLeft: 20,
+  fontSize: 14,
+  fontWeight: 600
+  },
+});
 //continuar
