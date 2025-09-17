@@ -5,28 +5,28 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 export default function Index() {
   const router = useRouter()
   return (
-    <View
-      style={styles.container}
-    >
+    <View style={styles.mainContainer}>
       <Image
         source={require("../assets/images/welcome.image.svg")}
         style={styles.userImage} />
 
-      <Text style={styles.Texto}>
+      <Text style={styles.mainText}>
         Discover your dream job here.</Text>
-      <Text style={styles.Texto2}>
+      <Text style={styles.mainText2}>
         Explore all the existing job roles based on your interest and study major</Text>
 
 
       <View 
-      style={styles.buttonContainer}
+      style={styles.ContainerButton}
       >
         <TouchableOpacity style={styles.button1} onPress={() => router.push('./login')}>
-          <Text style={styles.login}>Login</Text>
+          <Text style={styles.loginText}>
+            Login</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button2} onPress={() => router.push('./register')}>
-          <Text style={styles.register}>Register</Text>
+          <Text style={styles.registerText}>
+            Register</Text>
         </TouchableOpacity>
       </View>
       
@@ -39,14 +39,14 @@ export default function Index() {
 
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: 20
   },
 
-  buttonContainer: {
+    ContainerButton: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 
-  Texto: {
+  mainText: {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
   },
-  Texto2: {
+  mainText2: {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -75,11 +75,11 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     fontSize: 20,
   },
-  login:{
+  loginText:{
      color: '#FFFFFF', 
      fontSize: 22 
   },
-  register:{
+  registerText:{
      color: '#000000ff', 
      fontSize: 22
   },
