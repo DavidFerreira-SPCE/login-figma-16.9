@@ -8,54 +8,21 @@ export default function Index() {
       style={styles.containerBox}
     >
       <View
-        style={styles.backBox}>
+        style={styles.textBox}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.textBox}>
-            Back</Text>
+          <Text>
+            Back to Login</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.underBackBox}>
         <Text style={styles.text}>
-          Login Here</Text>
+          Hello!</Text>
         <Text style={styles.text2}>
-          Welcome back, You've been missed!
+          This is my first React Native app!
         </Text>
       </View>
 
-      <View style={styles.loginBox}>
-        <View style={styles.imputBox}>
-          <Text style={styles.text3}>
-            Email</Text>
-        </View>
-
-        <View style={styles.imputBox}>
-          <Text style={styles.text3}>
-            Password</Text>
-        </View>
-
-        <View style={styles.forgotBox}>
-          <TouchableOpacity onPress={() => router.back()}>
-            <Text style={styles.text4}>
-              Forgot Your Password? </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
-      <View style={styles.accountBox}>
-        <TouchableOpacity onPress={() => router.push('./register')}>
-          <Text style={styles.text5}>
-            Create new account</Text>
-        </TouchableOpacity>
-      </View>
-
-
-      <View style={styles.buttonBox}>
-        <TouchableOpacity style={styles.signInButton} onPress={() => router.push('./homex')}>
-          <Text style={styles.textoButton}>
-            Sign In</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
@@ -72,23 +39,13 @@ const styles = StyleSheet.create({
     },
     textBox: { //Container Back
         color: "#1F41BB",
-        alignContent: 'flex-start',
         fontSize: 14,
         width: 34,
         height: 17,
-        marginTop: 48,
+        marginTop: 24,
         marginLeft: 8,
     },
 
-    backBox: {//conteudo da back box
-        color: "#1F41BB",
-        alignContent: 'flex-start',
-        fontSize: 14,
-        width: 34,
-        height: 17,
-        marginTop: 48,
-        marginLeft: 8,
-    },
 
     underBackBox: { //Estilização do container underBack
         height: 131,
