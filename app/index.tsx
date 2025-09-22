@@ -16,9 +16,7 @@ export default function Index() {
         Explore all the existing job roles based on your interest and study major</Text>
 
 
-      <View 
-      style={styles.ContainerButton}
-      >
+      <View style={styles.ContainerButton}>
         <TouchableOpacity style={styles.button1} onPress={() => router.push('./login')}>
           <Text style={styles.loginText}>
             Login</Text>
