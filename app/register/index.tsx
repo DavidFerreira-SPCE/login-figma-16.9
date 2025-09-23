@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import { router } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -49,8 +50,8 @@ export default function Index() {
 
             <View style={styles.accountBox}>
                 <TouchableOpacity onPress={() => router.push('./login')}>
-                <Text style={styles.text5}>
-                    Already have an account?</Text>
+                    <Text style={styles.text5}>
+                        Already have an account?</Text>
                 </TouchableOpacity>
             </View>
 
@@ -61,6 +62,30 @@ export default function Index() {
                 </TouchableOpacity>
             </View>
 
+            <View style={styles.socialBox}>
+                <Text style={styles.registerText}>
+                    Or continue with</Text>
+                <View style= {styles.mediaBox}>
+                    <TouchableOpacity style={styles.mediaButton}>
+                        <Image
+                            source={require("../../assets/images/google.png")}
+                            style={styles.media}
+                        />
+                    </TouchableOpacity>
+                                     <TouchableOpacity style={styles.mediaButton}>
+                        <Image
+                            source={require("../../assets/images/facebook.png")}
+                            style={styles.media}
+                        />
+                    </TouchableOpacity>
+                                     <TouchableOpacity style={styles.mediaButton}>
+                        <Image
+                            source={require("../../assets/images/apple.png")}
+                            style={styles.media}
+                        />
+                    </TouchableOpacity>
+                </View>
+            </View>
 
         </View>
     );
@@ -73,17 +98,18 @@ export default function Index() {
 // Outro = Texto 
 const styles = StyleSheet.create({
     containerBox: { //Container da caixa principal
-        flex: 1,
-        marginHorizontal: 20,
+        marginBottom: 10,
+        marginHorizontal: 20
     },
     textBox: { //Container Back
+        marginHorizontal: 20,
         color: "#1F41BB",
         alignContent: 'flex-start',
         fontSize: 14,
         width: 34,
-        height: 17,
-        marginTop: 48,
-        marginLeft: 8,
+        height: 'auto',
+        marginTop: 'auto',
+        marginLeft: 'auto',
     },
 
     backBox: {//conteudo da back box
@@ -97,8 +123,8 @@ const styles = StyleSheet.create({
     },
 
     underBackBox: { //Estilização do container underBack
-        height: 131,
-        marginTop: 77,
+        height: 'auto',
+        marginTop: 40,
         marginRight: 5,
         justifyContent: 'center',
         alignItems: 'center',
@@ -117,8 +143,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        flex: 1,
-        gap: 16
     },
 
     imputBox: {//Container de email e senha de login
@@ -136,11 +160,33 @@ const styles = StyleSheet.create({
         marginBottom: 16
     },
 
-    accountBox:{
-        alignItems:'center',
+    accountBox: {
+        alignItems: 'center',
         justifyContent: 'center',
         width: 'auto',
         height: 21,
+    },
+
+    socialBox: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    mediaButton: {
+        backgroundColor: '#ECECEC',
+        borderRadius: 10
+    },
+    
+    mediaBox: {
+        flexDirection:'row',
+        gap: 16,
+        borderRadius: 10
+    },
+    media: {
+        backgroundColor: '#ECECEC',
+        height:44,
+        width:40,
+        gap: 10
     },
 
     textoButton: {//Estilização de texto do botão Sign In
@@ -155,6 +201,13 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 60,
         borderRadius: 10,
+    },
+
+    registerText: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: 14 ,
+        fontWeight: 600,
     },
 
     text: {//Conteudo do container underBack
@@ -189,8 +242,9 @@ const styles = StyleSheet.create({
         fontWeight: 600
     },
 
-    text5:{
+    text5: {
         fontWeight: 900
     }
+
 });
 //continuar

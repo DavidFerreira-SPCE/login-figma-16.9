@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import { router } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -56,6 +57,33 @@ export default function Index() {
             Sign In</Text>
         </TouchableOpacity>
       </View>
+
+    <View style={styles.socialBox}>
+                <Text style={styles.registerText}>
+                    Or continue with</Text>
+                <View style= {styles.mediaBox}>
+                    <TouchableOpacity style={styles.mediaButton}>
+                        <Image
+                            source={require("../../assets/images/google.png")}
+                            style={styles.media}
+                        />
+                    </TouchableOpacity>
+                                     <TouchableOpacity style={styles.mediaButton}>
+                        <Image
+                            source={require("../../assets/images/facebook.png")}
+                            style={styles.media}
+                        />
+                    </TouchableOpacity>
+                                     <TouchableOpacity style={styles.mediaButton}>
+                        <Image
+                            source={require("../../assets/images/apple.png")}
+                            style={styles.media}
+                        />
+                    </TouchableOpacity>
+                </View>
+        
+      </View>
+      
     </View>
   );
 }
@@ -70,14 +98,15 @@ const styles = StyleSheet.create({
         flex: 1,
         marginHorizontal: 20,
     },
-    textBox: { //Container Back
+     textBox: { //Container Back
+        marginHorizontal: 20,
         color: "#1F41BB",
         alignContent: 'flex-start',
         fontSize: 14,
         width: 34,
-        height: 17,
-        marginTop: 48,
-        marginLeft: 8,
+        height: 'auto',
+        marginTop: 'auto',
+        marginLeft: 'auto',
     },
 
     backBox: {//conteudo da back box
@@ -91,13 +120,12 @@ const styles = StyleSheet.create({
     },
 
     underBackBox: { //Estilização do container underBack
-        height: 131,
-        marginTop: 77,
+        height: 'auto',
+        marginTop: 40,
         marginRight: 5,
         justifyContent: 'center',
         alignItems: 'center',
         fontFamily: 'bold',
-        gap: 20,
     },
 
     loginBox: {//Container para as boxes de login com user e senha
@@ -111,8 +139,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        flex: 1,
-        gap: 16
+        flex: 1
     },
 
     imputBox: {//Container de email e senha de login
@@ -125,7 +152,6 @@ const styles = StyleSheet.create({
 
     forgotBox: {
         alignItems: 'flex-end',
-        marginTop: 20,
         marginRight: -20,
         marginBottom: 16
     },
@@ -149,6 +175,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 60,
         borderRadius: 10,
+    
     },
 
     text: {//Conteudo do container underBack
@@ -185,6 +212,36 @@ const styles = StyleSheet.create({
 
     text5:{
         fontWeight: 900
-    }
+    },
+    
+    registerText: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: 14 ,
+        fontWeight: 600,
+    },
+
+     socialBox: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 180,
+    },
+
+    mediaButton: {
+        backgroundColor: '#ECECEC',
+        borderRadius: 10
+    },
+    
+    mediaBox: {
+        flexDirection:'row',
+        gap: 16,
+        borderRadius: 10
+    },
+    media: {
+        backgroundColor: '#ECECEC',
+        height:44,
+        width:40,
+        gap: 10
+    },
 });
 //continuar

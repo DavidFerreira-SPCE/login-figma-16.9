@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 20
+    marginHorizontal: 20,
+    gap: 20,
   },
 
     ContainerButton: {
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
   userImage: {
     width: 350,
     height: 400,
-    marginTop: 20,
+    marginTop: 'auto',
   },
 
   mainText: {
@@ -88,8 +89,9 @@ const styles = StyleSheet.create({
     width: 160,
     height: 60,
     borderRadius: 10,
-    fontSize: 600
-
+    fontSize: 600,
+    marginTop: 20,
+    marginBottom:'auto'
   },
   button2: {
     backgroundColor: '#e0d9d9f6',
@@ -98,7 +100,9 @@ const styles = StyleSheet.create({
     width: 160,
     height: 60,
     borderRadius: 10,
-    fontSize: 600
+    fontSize: 600,
+    marginTop: 20,
+    marginBottom:'auto'
   }
 });
 //continuar

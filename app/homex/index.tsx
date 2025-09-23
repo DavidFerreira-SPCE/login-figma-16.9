@@ -38,8 +38,10 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     textBox: { //Container Back
+        
+        flexDirection:'row',
         color: "#1F41BB",
-        fontSize: 14,
+        fontSize: 12,
         width: 34,
         height: 17,
         marginTop: 24,
